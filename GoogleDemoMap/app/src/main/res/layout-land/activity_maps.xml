@@ -1,0 +1,75 @@
+<LinearLayout xmlns:map="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.example.jane.googledemomap.MapsActivity">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+
+        <EditText
+            android:layout_width="222dp"
+            android:layout_height="wrap_content"
+            android:inputType="textPersonName"
+            android:text="Name"
+            android:ems="10"
+            android:id="@+id/TFlocation" />
+
+        <Button
+            android:text="search"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/Bsearch"
+            android:layout_gravity="right"
+            android:onClick="onSearch" />
+
+        <Button
+            android:text="mapType"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/button5"
+            android:onClick="mapTypeChange"/>
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_height="435dp"
+        android:layout_width="match_parent">
+
+        <fragment
+        android:id="@+id/map"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_width="337dp"
+        android:layout_height="490dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="441dp"
+            android:weightSum="1">
+
+            <Button
+                android:text="^"
+                android:layout_width="match_parent"
+                android:layout_height="34dp"
+                android:id="@+id/zoomOut"
+                android:onClick="onZoomChange" />
+
+            <Button
+                android:text="v"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:id="@+id/zoomIn"
+                android:layout_weight="0.01"
+                android:onClick="onZoomChange"/>
+        </LinearLayout>
+
+    </LinearLayout>
+</LinearLayout>
+
